@@ -1,7 +1,7 @@
 let userInput = ''
 
 const getUserChoice = userInput => {
-  if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
+  if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'turtle') {
     return userInput;
   } else {
     console.log('Error Message: Please select from Rock, Paper, or Scissors.')
@@ -48,17 +48,26 @@ const determineWinner = (userChoice, computerChoice) => {
       return 'The user won!';
     }
   }
-  if (userChoice === 'bomb') {
-      return 'THE BOMB!?!?! NOTHING CAN BEAT THAT!! The user won!';
+  if (userChoice === 'turtle') {
+      return 'A TURTLE!?!?! NOTHING CAN BEAT THAT!! The user won!';
   }
 }
 
 const playGame = () => {
-  const userChoice = getUserChoice('plane');
+  const userChoice = getUserChoice('trashcan');
   const computerChoice = getComputerChoice();
-  console.log(`You threw: ${userChoice}`);
-  console.log(`The computer threw: ${computerChoice}`);
-  console.log(determineWinner(userChoice,computerChoice));
+  //NONE OF THESE WORKED!!!!
+  //if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'turtle'){
+  //if(getUserChoice !== console.log('Error Message: Please select from Rock, Paper, or Scissors.'){
+  //if(getUserChoice === 'rock' || getUserChoice === 'paper' || getUserChoice === 'scissors' || getUserChoice === 'turtle'){
+  //if(getUserChoice === userInput){
+  //if(userInput){
+    if(userChoice){
+    console.log(`You threw: ${userChoice}`);
+    console.log(`The computer threw: ${computerChoice}`);
+    console.log(determineWinner(userChoice,computerChoice));
+  }
 }
 
 playGame.call();
+
